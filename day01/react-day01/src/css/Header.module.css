@@ -1,0 +1,23 @@
+.header {
+    height: 10vh;
+    width: 100%;
+    background-color: #e18181;
+    display: flex;
+
+}
+
+#hd__sec01 {
+    flex: 3;
+    background-color: #e18181;
+}
+
+#hd__sec02 {
+    flex: 6;
+
+
+    background-color: #e18181;
+}
+#hd__sec03 {
+    flex: 3;
+    background-color: #e18181;
+}   

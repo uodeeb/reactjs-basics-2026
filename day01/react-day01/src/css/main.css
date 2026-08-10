@@ -1,0 +1,10 @@
+#main {
+    width: 100%;
+    height: auto;
+    min-height: 80vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vh;
+    padding: 1vh;
+}
