@@ -4,7 +4,29 @@
     min-height: 80vh;
 
     display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    gap: 1vh;
+    padding: 1vh;
+}
+
+.tabs__cont {
+    width: 100%;
+    height: 10vh;
+    display: flex;
     flex-wrap: wrap;
     gap: 1vh;
     padding: 1vh;
+    flex: 2;
+}
+
+.news__cont {
+    width: 100%;
+    height: auto;
+    /* min-height: 80vh; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vh;
+    padding: 1vh;
+    flex: 10;
 }

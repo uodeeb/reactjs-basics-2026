@@ -1,4 +1,4 @@
-.art__card {
+.art__cont {
     display: flex;
     flex-direction: column;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -49,7 +49,7 @@
     flex: 3;
     text-align: right;
     font-family: 'Lateef-regular';
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     padding: 1px;
 }
 .art__btn {

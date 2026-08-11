@@ -1,32 +1,45 @@
 import '../css/newscard.css'
+import { useState } from 'react'
+import defaultImg from '../assets/Techifly_logo_org-removebg.png'
 
 
+function NewsCard ({title, description, category, image}) {
 
-function NewsCard ({title, description, category}) {
+    const [isFavorite, setFavorite] = useState(false)
 
-    let state = {
-        isFav: false,
-    }
+
 
     const handleFeatured = (e) => {
-        console.log(e.target)
-        e.target.classList.toggle('featured')
-        console.log(e.target.classList.contains('featured'))
+        // console.log(e.target)
+        // e.target.classList.toggle('featured')
+        // console.log(e.target.classList.contains('featured'))
 
-        e.target.classList.contains('featured')? state.isFav = true : state.isFav = false
-        handleFav(state)
-        e.target.textContent = state.isFav ? '♥' : '♡'
+        // e.target.classList.contains('featured')? state.isFav = true : state.isFav = false
+        // handleFav(state)
+        // e.target.textContent = state.isFav ? '♥' : '♡'
+        // console.log(isFavorite)
+        setFavorite(!isFavorite)
+        // console.log(isFavorite)
+        !isFavorite ? e.target.classList.add('featured') : e.target.classList.remove('featured')
 
     }
 
-const handleFav = (state) => {
-    console.log(state)
-}
+
 
     return (
-        <article>
-             <section className="img__cont">
-           
+        <article className="art__cont">
+             <section 
+             className="img__cont"
+             style={{
+                backgroundImage: `${image}`?`url(${image})`:`url(${defaultImg})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+             }}
+             onClick={handleFeatured}
+             >
+                
+
             </section>
 
                 <section className="text__cont">
@@ -35,7 +48,7 @@ const handleFav = (state) => {
 
                     <div className="btns__cont">
                     <button className="art__btn" onClick={handleFeatured}>
-                        ♥ Featured
+                        {isFavorite ? '♥' : '♡'}
                     </button>
                     <p className="category">{category}</p>
                     </div>
